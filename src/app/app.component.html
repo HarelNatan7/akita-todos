@@ -5,6 +5,9 @@
   </form>
   <ng-container>
     <h1>Your Todos:</h1>
-    <h3 *ngIf="!todos">Create your first todo to see him here!</h3>
+    <h3 *ngIf="!todos$">Create your first todo to see him here!</h3>
+    <div class="todo-list" *ngIf="todos$">
+      <div class="todo" *ngFor="let todo of todos$ | async" ></div>
+    </div>
   </ng-container>
 </div>

@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { HttpClientModule } from '@angular/common/http';
+import { TodoService } from './state';
+import { NgEntityService } from "@datorama/akita-ng-entity-service";
 
 @NgModule({
   declarations: [
@@ -14,9 +17,10 @@ import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     AkitaNgDevtools.forRoot(),
   ],
-  providers: [],
+  providers: [TodoService, NgEntityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

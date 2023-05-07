@@ -9,7 +9,6 @@ import { TodoService } from './state';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'akita-todos';
   todoTxt: string = '';
   todos$?: Observable<Todo[]>
   
